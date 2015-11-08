@@ -1,8 +1,8 @@
-: even?
+: even? ( n -- f )
   2 mod 0= ;
 
-: fibonacci
-  swap over + ;
+: fibonacci ( n1 n2 -- n2 next )
+  tuck + ;
 
 : euler2
   0 >r
@@ -14,6 +14,6 @@
     then
   dup 4000000 >= until
   r> .
-  drop drop ;
+  2drop ;
 
 cr euler2 cr
